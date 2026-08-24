@@ -65,4 +65,3 @@ No build tools, package managers, or dependencies are required — it's a pure H
 ## Author
 
 **Bharathi S**
-[LinkedIn](https://linkedin.com/in/bharathi) | [GitHub](https://github.com/bharathi)
