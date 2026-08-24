@@ -1,0 +1,118 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #141b29; /* Dark background for a Disney+ look */
+    color: white; /* White text for contrast */
+}
+
+/* Header styling */
+.header {
+    background-color: #0f1115;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #1f232c;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.brand-logo {
+    width: 80px;
+    height: auto;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #1f80e0;
+    border-radius: 5px;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Movie menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+}
+
+.menu a {
+    flex-basis: calc(20% - 20px); /* 5 images per row, accounting for the gap */
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .menu a {
+        flex-basis: calc(25% - 20px); /* 4 images per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu a {
+        margin: 5px 0;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .menu a {
+        flex-basis: calc(33.33% - 20px); /* 3 images per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container h2 {
+        font-size: 1.8em;
+    }
+
+    .menu a {
+        flex-basis: calc(50% - 20px); /* 2 images per row */
+    }
+}
